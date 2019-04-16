@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.esei.uvigo.es/dai/hybridserver"
+	xmlns:tns="http://www.esei.uvigo.es/dai/hybridserver"
+	elementFormDefault="qualified">
+
+	<complexType name="connections">
+		<sequence>
+			<element name="http" type="integer" />
+			<element name="webservice" type="string" />
+			<element name="numClients" type="integer" />
+		</sequence>
+	</complexType>
+
+	<complexType name="database">
+		<sequence>
+			<element name="user" type="string" />
+			<element name="password" type="string" />
+			<element name="url" type="string" />
+		</sequence>
+	</complexType>
+
+	<complexType name="servers2">
+		<attribute name="name" type="string" />
+		<attribute name="wsdl" type="string" />
+		<attribute name="namespace" type="string" />
+		<attribute name="service" type="string" />
+		<attribute name="httpAddress" type="string" />
+	</complexType>
+	
+	<complexType name="servers">
+		<sequence>
+			<element name="server" type="tns:servers2"
+				maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	
+	<element name="configuration">
+		<complexType>
+			<sequence>
+				<element name="connections" type="tns:connections" maxOccurs="1" />
+				<element name="database" type="tns:database" maxOccurs="1" />
+				<element name="servers" type="tns:servers" maxOccurs="1" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

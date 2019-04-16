@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: javax.jws.soap;version="1.1",javax.jws;version="1.1"
+Built-By: java_re
+Tool: Bnd-0.0.357
+Bundle-Name: javax.jws API v.1.1
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: GlassFish Community
+Build-Jdk: 1.6.0_21
+Bundle-Version: 3.1.2
+Bnd-LastModified: 1329482658344
+Bundle-ManifestVersion: 2
+Bundle-License: https://glassfish.dev.java.net/nonav/public/CDDL+GPL.h
+ tml
+Bundle-Description: Web Services Metadata for the Java(TM) Platform AP
+ I Repackaged as OSGi bundle in GlassFish
+Bundle-SymbolicName: org.glassfish.main.javaee-api.javax.jws
+Bundle-DocURL: http://glassfish.java.net
+Embed-Dependency: *;scope=compile;inline=true
